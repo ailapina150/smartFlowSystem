@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SmartFlow — Разработка чат-ботов</title>
+    <link rel="icon" type="image/jpeg" href="img/img2.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,500;14..32,700;14..32,900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div class="bg-glow"></div>
+
+<div class="container">
+    <header>
+        <div class="logo">
+            <img src="img/img2.png" alt="SmartFlow" />
+            SmartFlow
+        </div>
+        <div class="header-socials">
+            <a href="https://t.me/Hanalapina" target="_blank" rel="noopener" title="Telegram" aria-label="Telegram">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M9.04 15.51l-.38 5.35c.54 0 .78-.23 1.06-.51l2.55-2.44 5.28 3.87c.97.53 1.66.25 1.92-.9L22.9 4.5c.31-1.4-.51-1.94-1.45-1.6L1.7 9.9c-1.38.54-1.36 1.31-.25 1.65l5.02 1.57L18.5 5.9c.57-.38 1.09-.17.66.21L9.04 15.51z"/>
+                </svg>
+            </a>
+            <a href="https://wa.me/375298211966" target="_blank" rel="noopener" title="WhatsApp" aria-label="WhatsApp">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.39-1.47-.88-.79-1.48-1.76-1.65-2.06-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.8.37-.27.3-1.04 1.02-1.04 2.5 0 1.47 1.07 2.89 1.22 3.09.15.2 2.11 3.22 5.1 4.51.71.31 1.27.49 1.7.63.72.23 1.37.2 1.88.12.57-.09 1.76-.72 2.01-1.42.25-.7.25-1.29.17-1.42-.07-.13-.27-.2-.57-.35zM12.05 21.79h-.01a9.87 9.87 0 0 1-5.03-1.38l-.36-.21-3.74.98 1-3.65-.24-.37a9.86 9.86 0 0 1-1.51-5.26c0-5.45 4.44-9.88 9.9-9.88a9.83 9.83 0 0 1 7 2.9 9.83 9.83 0 0 1 2.89 7c0 5.45-4.44 9.88-9.9 9.88zm8.42-18.3A11.82 11.82 0 0 0 12.05 0C5.5 0 .16 5.33.16 11.89c0 2.1.55 4.14 1.59 5.94L.06 24l6.33-1.66a11.88 11.88 0 0 0 5.66 1.44h.01c6.55 0 11.89-5.33 11.89-11.89 0-3.18-1.24-6.16-3.48-8.4z"/>
+                </svg>
+            </a>
+            <button class="phone-btn" onclick="togglePhonePopup()" title="Телефон" aria-label="Телефон">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+            </button>
+        </div>
+        <div class="phone-popup" id="phonePopup">
+            <a href="tel:+48518856974">Краков +48 518 856 974</a>
+            <a href="tel:+375298211966">Минск +375 29 821 19 66</a>
+            <a href="tel:+74851234567">Москва +7 485 123 45 67</a>
+        </div>        <nav>
+        <a href="index-ru.html">Главная</a>
+        <a href="landing-ru.html">Сайты</a>
+        <a href="chatbots-ru.html">Чат-боты</a>
+        <a href="ai-images-ru.html">AI-изображения</a>
+        <a href="bs-ru.html">ПО</a>
+        <span class="nav-divider">|</span>
+        <a href="#solutions">Решения</a>
+        <a href="#work">Портфолио</a>
+        <a href="#pricing">Цены</a>
+        <a href="#contact" class="nav-contact-btn">Контакты</a>
+        <span class="lang-switch"><a href="landing.html">EN</a> | <a href="landing-ru.html" class="active">RU</a></span>
+    </nav>
+    </header>
+
+    <!-- ===== ГЕРОЙ ===== -->
+    <section class="full-section" id="home">
+        <div class="container">
+            <div class="hero">
+                <div class="hero-text">
+                    <h1>Чат-боты на<br /><span>базе AI</span></h1>
+                    <p>Автоматизируйте поддержку, генерируйте лиды и общайтесь с клиентами 24/7 с помощью чат-ботов, созданных специально для вашего бизнеса. Вашей команде не нужны навыки программирования — мы всё сделаем сами.</p>
+                    <div>
+                        <a href="#contact" class="btn">Создать бота</a>
+                        <a href="#work" class="btn btn-outline">Примеры</a>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="hero-stat-item">
+                            <div class="number">24/7</div>
+                            <div class="label">Всегда на связи</div>
+                        </div>
+                        <div class="hero-stat-item">
+                            <div class="number">70%</div>
+                            <div class="label">Быстрее ответ</div>
+                        </div>
+                        <div class="hero-stat-item">
+                            <div class="number">100%</div>
+                            <div class="label">Индивидуально</div>
+                        </div>
+                    </div>
+                </div>
+                <div style="text-align:center; display:flex; flex-direction:column; align-items:center; justify-content:center;">
+                    <div style="font-size:140px; line-height:1; opacity:0.5; perspective: 600px;">
+                        <img src="img/img1.jpg" style="height: 240px; display: block; animation: rotateCube 6s ease-in-out infinite; border-radius: 12px;" alt="SmartFlow">
+                    </div>
+                    <div style="margin-top:16px; color:rgba(255,255,255,0.15); font-weight:300; letter-spacing:6px; font-size:15px;">ИНДИВИДУАЛЬНАЯ РАЗРАБОТКА</div>
+                    <div style="margin-top:12px; color:rgba(255,255,255,0.08); font-size:13px; letter-spacing:2px;">ВЕБ · МОБИЛЬНЫЕ · ОБЛАКО</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== РЕШЕНИЯ ===== -->
+    <section class="full-section" id="solutions">
+        <div class="container">
+            <h2 style="font-size:42px; font-weight:800; margin-bottom:12px; letter-spacing:-1px;">Что мы создаём</h2>
+            <p style="color:rgba(255,255,255,0.5); font-size:20px; max-width:600px; margin-bottom:8px;">Чат-боты, которые понимают ваш бизнес и ваших клиентов. От простых FAQ до помощников на базе ИИ.</p>
+
+            <div class="service-grid">
+                <div class="service-card" style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.05); border-radius:24px; padding:36px 28px; transition:border-color 0.3s, transform 0.3s; backdrop-filter:blur(4px);">
+                    <span class="icon" style="font-size:40px; display:block; margin-bottom:16px;">💬</span>
+                    <h3 style="font-size:24px; font-weight:700; margin-bottom:10px;">Боты поддержки</h3>
+                    <p style="color:rgba(255,255,255,0.55); font-size:16px; line-height:1.6;">Автоматизируйте ответы на частые вопросы, решайте проблемы и обрабатывайте заявки без участия человека. Работают 24/7.</p>
+                    <span class="price">от 20$</span>
+                </div>
+                <div class="service-card" style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.05); border-radius:24px; padding:36px 28px; transition:border-color 0.3s, transform 0.3s; backdrop-filter:blur(4px);">
+                    <span class="icon" style="font-size:40px; display:block; margin-bottom:16px;">🎯</span>
+                    <h3 style="font-size:24px; font-weight:700; margin-bottom:10px;">Генерация лидов</h3>
+                    <p style="color:rgba(255,255,255,0.55); font-size:16px; line-height:1.6;">Квалифицируйте лиды, назначайте встречи и собирайте контакты автоматически. Превращайте посетителей в клиентов.</p>
+                    <span class="price">от 100$</span>
+                </div>
+                <div class="service-card" style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.05); border-radius:24px; padding:36px 28px; transition:border-color 0.3s, transform 0.3s; backdrop-filter:blur(4px);">
+                    <span class="icon" style="font-size:40px; display:block; margin-bottom:16px;">🧠</span>
+                    <h3 style="font-size:24px; font-weight:700; margin-bottom:10px;">AI-ассистенты</h3>
+                    <p style="color:rgba(255,255,255,0.55); font-size:16px; line-height:1.6;">Продвинутые боты с NLP, которые понимают контекст, обучаются на диалогах и решают сложные задачи.</p>
+                    <span class="price">от 200$</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ПОРТФОЛИО / СЛАЙДЕР ===== -->
+    <section class="full-section" id="work">
+        <div class="container">
+            <div class="slider-section">
+                <h2>Примеры ботов</h2>
+                <div class="slider-wrapper">
+                    <div class="slider-track" id="sliderTrack">
+                        <div class="slide" style="background-image: url('img/bot1.jpg');"></div>
+                        <div class="slide" style="background-image: url('img/bot2.jpg');"></div>
+                        <div class="slide" style="background-image: url('img/bot3.jpg');"></div>
+                    </div>
+                    <button class="slider-btn prev" id="prevBtn">‹</button>
+                    <button class="slider-btn next" id="nextBtn">›</button>
+                </div>
+                <div class="slider-dots" id="sliderDots"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ЦЕНЫ ===== -->
+    <section class="full-section" id="pricing">
+        <div class="container">
+            <h2 style="font-size:42px; font-weight:800; margin-bottom:8px; letter-spacing:-1px; text-align:center;">Выберите тариф</h2>
+            <p style="color:rgba(255,255,255,0.5); font-size:20px; text-align:center; max-width:600px; margin:0 auto 8px;">Гибкие варианты для бизнеса любого размера. Всё разрабатывается индивидуально.</p>
+
+            <div class="pricing-grid">
+                <!-- Стартовый -->
+                <div class="pricing-card">
+                    <span class="icon">⚡</span>
+                    <h3>Стартовый</h3>
+                    <div class="price">от 20$</div>
+                    <p style="color:rgba(255,255,255,0.4); font-size:14px; margin:4px 0 12px;">Без кода · Готов за 1 день</p>
+                    <ul>
+                        <li>✅ Бот для FAQ и поддержки</li>
+                        <li>✅ Визуальный конструктор</li>
+                        <li>✅ 500 диалогов в месяц</li>
+                        <li>✅ Интеграция с почтой и сайтом</li>
+                    </ul>
+                    <div style="margin:12px 0; padding:8px 12px; background:rgba(124,106,255,0.05); border-radius:8px; font-size:13px; color:rgba(255,255,255,0.4);">
+                        <strong style="color:#b8aaff;">Идеально для:</strong> Малый бизнес, кафе, салоны красоты
+                    </div>
+                    <a href="#contact" class="btn">Заказать</a>
+                </div>
+
+                <!-- Профи -->
+                <div class="pricing-card" style="border-color: rgba(124,106,255,0.2);">
+                    <span class="icon">🚀</span>
+                    <h3>Профи</h3>
+                    <div class="price">от 100$</div>
+                    <p style="color:rgba(255,255,255,0.4); font-size:14px; margin:4px 0 12px;">Индивидуальный код · 5–7 дней</p>
+                    <ul>
+                        <li>✅ Бот для генерации лидов</li>
+                        <li>✅ Разработка на заказ</li>
+                        <li>✅ База данных клиентов и заказов</li>
+                        <li>✅ Интеграция с CRM и платежами</li>
+                        <li>✅ 2 000 диалогов в месяц</li>
+                    </ul>
+                    <div style="margin:12px 0; padding:8px 12px; background:rgba(124,106,255,0.05); border-radius:8px; font-size:13px; color:rgba(255,255,255,0.4);">
+                        <strong style="color:#b8aaff;">Идеально для:</strong> E‑commerce, услуги, агентства
+                    </div>
+                    <a href="#contact" class="btn">Заказать</a>
+                </div>
+
+                <!-- Бизнес -->
+                <div class="pricing-card" style="border-color: rgba(224,64,176,0.2);">
+                    <span class="icon">🧠</span>
+                    <h3>Бизнес</h3>
+                    <div class="price">от 200$</div>
+                    <p style="color:rgba(255,255,255,0.4); font-size:14px; margin:4px 0 12px;">На базе ИИ · 2–4 недели</p>
+                    <ul>
+                        <li>✅ AI-ассистент с NLP</li>
+                        <li>✅ Понимание контекста</li>
+                        <li>✅ Обучение на ваших данных</li>
+                        <li>✅ Безлимит диалогов</li>
+                        <li>✅ Индивидуальные интеграции</li>
+                    </ul>
+                    <div style="margin:12px 0; padding:8px 12px; background:rgba(124,106,255,0.05); border-radius:8px; font-size:13px; color:rgba(255,255,255,0.4);">
+                        <strong style="color:#b8aaff;">Идеально для:</strong> Крупный бизнес, SaaS, финтех, медицина
+                    </div>
+                    <a href="#contact" class="btn">Заказать</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ПРИЗЫВ К ДЕЙСТВИЮ ===== -->
+    <section class="full-section" id="cta">
+        <div class="container">
+            <div style="text-align:center; padding:40px 0 20px;">
+                <h2 style="font-size:48px; font-weight:800; letter-spacing:-1px; margin-bottom:16px;">Готовы автоматизировать<br />общение?</h2>
+                <p style="color:rgba(255,255,255,0.5); font-size:22px; max-width:600px; margin:0 auto 40px;">Создадим бота, который понимает клиентов, отвечает на вопросы и развивает ваш бизнес — пока вы спите.</p>
+                <a href="#contact" class="btn" style="font-size:20px; padding:18px 60px;">Начать проект</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== КОНТАКТЫ ===== -->
+    <div id="contactSection"></div>
+
+    <footer>
+        <div class="container">© 2026 SmartFlow · Разработка AI и чат-ботов</div>
+    </footer>
+</div>
+
+<!-- ===== СКРИПТЫ ===== -->
+<script src="js/main.js"></script>
+<script src="js/contact.js"></script>
+</body>
+</html>

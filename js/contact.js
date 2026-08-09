@@ -132,7 +132,7 @@ function initContactForm() {
 
     newForm.addEventListener('submit', function(e) {
         e.preventDefault();
-        console.log('📤 Отправка формы...');
+        console.log('📤 ОSubmitting the form...');
 
         const formData = new FormData(this);
         const submitBtn = this.querySelector('.btn');
@@ -156,7 +156,7 @@ function initContactForm() {
                 }
             })
             .catch(error => {
-                console.error('❌ Ошибка:', error);
+                console.error('❌ Error:', error);
                 showToast('❌ Failed to send. Please try again later.');
             })
             .finally(() => {

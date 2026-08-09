@@ -99,6 +99,28 @@ nav {
 nav a {
     white-space: nowrap;
     color: rgba(255, 255, 255, 0.6);
+/* ===== LANGUAGE SWITCH ===== */
+.lang-switch {
+    margin-left: 16px;
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.5);
+    white-space: nowrap;
+}
+.lang-switch a {
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    padding: 2px 6px;
+    border-radius: 4px;
+    transition: color 0.3s, background 0.3s;
+}
+.lang-switch a:hover {
+    color: #fff;
+}
+.lang-switch a.active {
+    color: #b8aaff;
+    background: rgba(124, 106, 255, 0.15);
+}
     transition: color 0.3s;
     position: relative;
     cursor: pointer;
