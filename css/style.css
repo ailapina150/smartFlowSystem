@@ -301,7 +301,7 @@ nav a:hover::after {
 }
 
 .slider-section h2 {
-    font-size: 42px;
+    font-size: clamp(28px, 5vw, 42px);
     font-weight: 800;
     margin-bottom: 40px;
     letter-spacing: -1px;
@@ -613,7 +613,7 @@ nav a:hover::after {
 }
 
 .contact-info h2 {
-    font-size: 42px;
+    font-size: clamp(28px, 5vw, 42px);
     font-weight: 800;
     margin-bottom: 16px;
     letter-spacing: -1px;
@@ -1069,4 +1069,12 @@ footer {
 .phone-popup a:hover {
     background: rgba(124, 106, 255, 0.15);
     color: #fff;
+}
+
+/* ===== UNIFIED RESPONSIVE H2 ===== */
+h2 {
+    font-size: clamp(28px, 5vw, 42px);
+    font-weight: 800;
+    letter-spacing: -1px;
+    line-height: 1.2;
 }
