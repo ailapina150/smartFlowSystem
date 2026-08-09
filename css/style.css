@@ -517,6 +517,13 @@ nav a:hover::after {
 .cards-wrapper:hover .cards-track {
     animation-play-state: paused;
 }
+/* ===== CAROUSEL WITH PRICES (AI IMAGES) ===== */
+.cards-track .card-slide[style*="aspect-ratio:auto"] {
+    aspect-ratio: auto;
+    justify-content: flex-start;
+    height: auto;
+    min-height: 260px;
+}
 
 .footer-note {
     margin-top: 40px;
