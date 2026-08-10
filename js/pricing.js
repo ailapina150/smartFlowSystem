@@ -42,6 +42,16 @@ const PRICING = {
     website: 150,        // Websites & Landing Pages from $150
     chatbot: 30,         // AI Chatbots from $30
     aiImage: 5,          // AI Images & Design from $5
+  },
+
+  // --- Discount Configuration ---
+  discount: {
+    percent: 30,                 // Discount percentage (e.g., 30 = 30%)
+    endDate: '2026-09-30',       // Discount end date (YYYY-MM-DD)
+    text: {
+      en: '30% OFF until 30/09/2026',
+      ru: 'СКИДКА 30% до 30/09/2026'
+    }
   }
 };
 
