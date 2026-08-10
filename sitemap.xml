@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://smart-flow.tech/index.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smart-flow.tech/index.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://smart-flow.tech/index-ru.html" />
+  </url>
+  <url>
+    <loc>https://smart-flow.tech/index-ru.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smart-flow.tech/index.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://smart-flow.tech/index-ru.html" />
+  </url>
+  <url>
+    <loc>https://smart-flow.tech/landing.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smart-flow.tech/landing.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://smart-flow.tech/landing-ru.html" />
+  </url>
+  <url>
+    <loc>https://smart-flow.tech/landing-ru.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smart-flow.tech/landing.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://smart-flow.tech/landing-ru.html" />
+  </url>
+  <url>
+    <loc>https://smart-flow.tech/chatbots.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smart-flow.tech/chatbots.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://smart-flow.tech/chatbots-ru.html" />
+  </url>
+  <url>
+    <loc>https://smart-flow.tech/chatbots-ru.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smart-flow.tech/chatbots.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://smart-flow.tech/chatbots-ru.html" />
+  </url>
+  <url>
+    <loc>https://smart-flow.tech/ai-images.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smart-flow.tech/ai-images.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://smart-flow.tech/ai-images-ru.html" />
+  </url>
+  <url>
+    <loc>https://smart-flow.tech/ai-images-ru.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smart-flow.tech/ai-images.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://smart-flow.tech/ai-images-ru.html" />
+  </url>
+  <url>
+    <loc>https://smart-flow.tech/bs.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smart-flow.tech/bs.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://smart-flow.tech/bs-ru.html" />
+  </url>
+  <url>
+    <loc>https://smart-flow.tech/bs-ru.html</loc>
+    <lastmod>2026-08-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smart-flow.tech/bs.html" />
+    <xhtml:link rel="alternate" hreflang="ru" href="https://smart-flow.tech/bs-ru.html" />
+  </url>
+</urlset>
