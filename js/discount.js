@@ -1,7 +1,7 @@
 /**
  * SmartFlow - Discount Banner
  * ===========================
- * Shows a bright "discount" badge in the top-right corner
+ * Shows a bright "discount" badge below the header
  * when the discount is active (current date < endDate).
  * Configure the discount in js/pricing.js → PRICING.discount
  */
@@ -40,36 +40,39 @@
     badge.textContent = text;
 
     // Style the badge
-    Object.assign(badge.style, {
-      position: 'fixed',
-      top: '16px',
-      right: '16px',
-      zIndex: '9999',
-      background: 'linear-gradient(135deg, #ff4d4d, #ff8c00)',
-      color: '#ffffff',
-      padding: '10px 20px',
-      borderRadius: '40px',
-      fontWeight: '800',
-      fontSize: '14px',
-      letterSpacing: '0.5px',
-      boxShadow: '0 4px 20px rgba(255, 77, 77, 0.4)',
-      cursor: 'pointer',
-      animation: 'discountPulse 2s ease-in-out infinite',
-      fontFamily: "'Inter', sans-serif",
-      textTransform: 'uppercase'
-    });
+      Object.assign(badge.style, {
+          position: 'fixed',        // или 'absolute' - закрепляем в углу
+          top: '250px',              // отступ сверху
+          right: '20px',            // отступ справа
+          zIndex: '9999',
+          background: 'linear-gradient(135deg, #ff4d4d, #ff8c00)',
+          color: '#ffffff',
+          padding: '10px 20px',
+          borderRadius: '40px',
+          fontWeight: '800',
+          fontSize: '14px',
+          letterSpacing: '0.5px',
+          boxShadow: '0 4px 20px rgba(255, 77, 77, 0.4)',
+          cursor: 'pointer',
+          animation: 'discountPulse 2s ease-in-out infinite',
+          fontFamily: "'Inter', sans-serif",
+          textTransform: 'uppercase',
+          textAlign: 'center',
+          // Добавляем:
+          width: 'auto',            // ширина по содержимому
+          maxWidth: '300px',        // опционально - ограничиваем максимальную ширину
+          whiteSpace: 'nowrap',     // чтобы текст не переносился
+      });
 
     // Add pulse animation
     const style = document.createElement('style');
     style.textContent = `
       @keyframes discountPulse {
-        0%, 100% { transform: scale(1); box-shadow: 0 4px 20px rgba(255, 77, 77, 0.4); }
-        50% { transform: scale(1.05); box-shadow: 0 6px 30px rgba(255, 77, 77, 0.6); }
+        0%, 100% { background: linear-gradient(135deg, #ff4d4d, #ff8c00); }
+        50% { background: linear-gradient(135deg, #ff6b6b, #ffa500); }
       }
       @media (max-width: 768px) {
         #discount-badge {
-          top: 10px;
-          right: 10px;
           padding: 8px 14px;
           font-size: 12px;
         }
@@ -77,8 +80,14 @@
     `;
     document.head.appendChild(style);
 
-    // Add to page
-    document.body.appendChild(badge);
+    // Insert badge right after the header element
+    const header = document.querySelector('header');
+    if (header && header.parentNode) {
+      header.parentNode.insertBefore(badge, header.nextSibling);
+    } else {
+      // Fallback: insert at top of body
+      document.body.insertBefore(badge, document.body.firstChild);
+    }
 
     // Optional: click scrolls to contact
     badge.addEventListener('click', function() {
