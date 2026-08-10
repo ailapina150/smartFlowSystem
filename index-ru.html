@@ -198,19 +198,19 @@
                     <span class="icon" style="font-size:40px; display:block; margin-bottom:16px;">&#128187;</span>
                     <h3 style="font-size:24px; font-weight:700; margin-bottom:10px;">Сайты и лендинги</h3>
                     <p style="color:rgba(255,255,255,0.55); font-size:16px; line-height:1.6;">Современные, быстрые и ориентированные на конверсию сайты, созданные с нуля. От лендингов до корпоративных сайтов и e-commerce.</p>
-                    <span class="price" style="display:inline-block; margin-top:18px; padding:6px 18px; background:rgba(124,106,255,0.12); border-radius:40px; font-weight:600; font-size:15px; color:#b8aaff;">от $450 &rarr;</span>
+                    <span class="price" style="display:inline-block; margin-top:18px; padding:6px 18px; background:rgba(124,106,255,0.12); border-radius:40px; font-weight:600; font-size:15px; color:#b8aaff;"><span id="price-homepage-website">от $450</span> &rarr;</span>
                 </a>
                 <a href="chatbots-ru.html" class="service-card" style="text-decoration:none; color:inherit; display:block;">
                     <span class="icon" style="font-size:40px; display:block; margin-bottom:16px;">&#129302;</span>
                     <h3 style="font-size:24px; font-weight:700; margin-bottom:10px;">AI-чат-боты</h3>
                     <p style="color:rgba(255,255,255,0.55); font-size:16px; line-height:1.6;">Автоматизируйте поддержку клиентов, генерируйте лиды и вовлекайте пользователей 24/7 с помощью чат-ботов под ваш бизнес.</p>
-                    <span class="price" style="display:inline-block; margin-top:18px; padding:6px 18px; background:rgba(124,106,255,0.12); border-radius:40px; font-weight:600; font-size:15px; color:#b8aaff;">от $20 &rarr;</span>
+                    <span class="price" style="display:inline-block; margin-top:18px; padding:6px 18px; background:rgba(124,106,255,0.12); border-radius:40px; font-weight:600; font-size:15px; color:#b8aaff;"><span id="price-homepage-chatbot">от $20</span> &rarr;</span>
                 </a>
                 <a href="ai-images-ru.html" class="service-card" style="text-decoration:none; color:inherit; display:block;">
                     <span class="icon" style="font-size:40px; display:block; margin-bottom:16px;">&#127912;</span>
                     <h3 style="font-size:24px; font-weight:700; margin-bottom:10px;">AI-изображения и дизайн</h3>
                     <p style="color:rgba(255,255,255,0.55); font-size:16px; line-height:1.6;">Визитки, фото товаров, флаеры, открытки и многое другое — создаётся с помощью AI за минуты. Профессиональное качество, доступные цены.</p>
-                    <span class="price" style="display:inline-block; margin-top:18px; padding:6px 18px; background:rgba(124,106,255,0.12); border-radius:40px; font-weight:600; font-size:15px; color:#b8aaff;">от $3 &rarr;</span>
+                    <span class="price" style="display:inline-block; margin-top:18px; padding:6px 18px; background:rgba(124,106,255,0.12); border-radius:40px; font-weight:600; font-size:15px; color:#b8aaff;"><span id="price-homepage-aiimage">от $3</span> &rarr;</span>
                 </a>
                 <a href="bs-ru.html" class="service-card" style="text-decoration:none; color:inherit; display:block;">
                     <span class="icon" style="font-size:40px; display:block; margin-bottom:16px;">&#128295;</span>
@@ -302,7 +302,20 @@
 </div>
 
 <!-- ===== SCRIPTS ===== -->
+<script src="js/pricing.js"></script>
 <script src="js/main.js"></script>
 <script src="js/contact-ru.js"></script>
+<script>
+  // Apply centralized pricing
+  document.addEventListener('DOMContentLoaded', function() {
+    const setPrice = (id, price) => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = formatPrice(price, 'ru');
+    };
+    setPrice('price-homepage-website', PRICING.homepage.website);
+    setPrice('price-homepage-chatbot', PRICING.homepage.chatbot);
+    setPrice('price-homepage-aiimage', PRICING.homepage.aiImage);
+  });
+</script>
 </body>
 </html>
