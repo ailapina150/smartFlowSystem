@@ -185,6 +185,7 @@
     </section>
 
     <!-- ===== SERVICES ===== -->
+    <!-- ===== SERVICES ===== -->
     <section class="full-section" id="services">
         <div class="container">
             <h2 style="font-weight:800; margin-bottom:12px; letter-spacing:-1px;">What we offer</h2>
@@ -195,25 +196,33 @@
                     <span class="icon" style="font-size:40px; display:block; margin-bottom:16px;">&#128187;</span>
                     <h3 style="font-size:24px; font-weight:700; margin-bottom:10px;">Websites &amp; Landing Pages</h3>
                     <p style="color:rgba(255,255,255,0.55); font-size:16px; line-height:1.6;">Modern, fast, and conversion-focused websites built from scratch. From single landing pages to full corporate sites and e-commerce.</p>
-                    <span class="price" style="display:inline-block; margin-top:18px; padding:6px 18px; background:rgba(124,106,255,0.12); border-radius:40px; font-weight:600; font-size:15px; color:#b8aaff;"><span id="price-homepage-website">from $450</span> &rarr;</span>
+                    <span class="price" style="display:inline-block; margin-top:18px; padding:6px 18px; background:rgba(124,106,255,0.12); border-radius:40px; font-weight:600; font-size:15px; color:#b8aaff;">
+                    <span id="price-homepage-website"></span> &rarr;
+                </span>
                 </a>
                 <a href="chatbots.html" class="service-card" style="text-decoration:none; color:inherit; display:block;">
                     <span class="icon" style="font-size:40px; display:block; margin-bottom:16px;">&#129302;</span>
                     <h3 style="font-size:24px; font-weight:700; margin-bottom:10px;">AI Chatbots</h3>
                     <p style="color:rgba(255,255,255,0.55); font-size:16px; line-height:1.6;">Automate customer support, generate leads, and engage users 24/7 with custom chatbots tailored to your business.</p>
-                    <span class="price" style="display:inline-block; margin-top:18px; padding:6px 18px; background:rgba(124,106,255,0.12); border-radius:40px; font-weight:600; font-size:15px; color:#b8aaff;"><span id="price-homepage-chatbot">from $20</span> &rarr;</span>
+                    <span class="price" style="display:inline-block; margin-top:18px; padding:6px 18px; background:rgba(124,106,255,0.12); border-radius:40px; font-weight:600; font-size:15px; color:#b8aaff;">
+                    <span id="price-homepage-chatbot"></span> &rarr;
+                </span>
                 </a>
                 <a href="ai-images.html" class="service-card" style="text-decoration:none; color:inherit; display:block;">
                     <span class="icon" style="font-size:40px; display:block; margin-bottom:16px;">&#127912;</span>
                     <h3 style="font-size:24px; font-weight:700; margin-bottom:10px;">AI Images &amp; Design</h3>
                     <p style="color:rgba(255,255,255,0.55); font-size:16px; line-height:1.6;">Business cards, product photos, flyers, greeting cards, and more � generated with AI in minutes. Professional quality, affordable prices.</p>
-                    <span class="price" style="display:inline-block; margin-top:18px; padding:6px 18px; background:rgba(124,106,255,0.12); border-radius:40px; font-weight:600; font-size:15px; color:#b8aaff;"><span id="price-homepage-aiimage">from $3</span> &rarr;</span>
+                    <span class="price" style="display:inline-block; margin-top:18px; padding:6px 18px; background:rgba(124,106,255,0.12); border-radius:40px; font-weight:600; font-size:15px; color:#b8aaff;">
+                    <span id="price-homepage-aiimage"></span> &rarr;
+                </span>
                 </a>
                 <a href="bs.html" class="service-card" style="text-decoration:none; color:inherit; display:block;">
                     <span class="icon" style="font-size:40px; display:block; margin-bottom:16px;">&#128295;</span>
                     <h3 style="font-size:24px; font-weight:700; margin-bottom:10px;">Web Applications</h3>
                     <p style="color:rgba(255,255,255,0.55); font-size:16px; line-height:1.6;">Tailor-made digital solutions that automate workflows, unite teams, and scale with your company. Perfect for 5 to 150 employees.</p>
-                    <span class="price" style="display:inline-block; margin-top:18px; padding:6px 18px; background:rgba(124,106,255,0.12); border-radius:40px; font-weight:600; font-size:15px; color:#b8aaff;">Custom quote &rarr;</span>
+                    <span class="price" style="display:inline-block; margin-top:18px; padding:6px 18px; background:rgba(124,106,255,0.12); border-radius:40px; font-weight:600; font-size:15px; color:#b8aaff;">
+                    <span id="price-homepage-software"></span> &rarr;
+                </span>
                 </a>
             </div>
         </div>
@@ -300,6 +309,7 @@
 
 <!-- ===== SCRIPTS ===== -->
 <script src="js/pricing.js"></script>
+<script src="js/price-updater.js"></script>
 <script src="js/main.js"></script>
 <script src="js/contact.js"></script>
 <script>
@@ -312,6 +322,7 @@
     setPrice('price-homepage-website', PRICING.homepage.website);
     setPrice('price-homepage-chatbot', PRICING.homepage.chatbot);
     setPrice('price-homepage-aiimage', PRICING.homepage.aiImage);
+    setPrice('price-homepage-software', PRICING.webApp.custom);
   });
 </script>
 </body>
