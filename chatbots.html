@@ -175,19 +175,19 @@
                     <span class="icon" style="font-size:40px; display:block; margin-bottom:16px;">💬</span>
                     <h3 style="font-size:24px; font-weight:700; margin-bottom:10px;">Support bots</h3>
                     <p style="color:rgba(255,255,255,0.55); font-size:16px; line-height:1.6;">Automate FAQs, troubleshoot issues, and resolve tickets without human intervention. Available 24/7.</p>
-                    <span class="price">from 20$</span>
+                    <span class="price"><span id="price-chatbot-basic">from 20$</span></span>
                 </div>
                 <div class="service-card" style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.05); border-radius:24px; padding:36px 28px; transition:border-color 0.3s, transform 0.3s; backdrop-filter:blur(4px);">
                     <span class="icon" style="font-size:40px; display:block; margin-bottom:16px;">🎯</span>
                     <h3 style="font-size:24px; font-weight:700; margin-bottom:10px;">Lead generation</h3>
                     <p style="color:rgba(255,255,255,0.55); font-size:16px; line-height:1.6;">Qualify leads, schedule meetings, and collect contact info automatically. Turn visitors into customers.</p>
-                    <span class="price">from 100$</span>
+                    <span class="price"><span id="price-chatbot-pro">from 100$</span></span>
                 </div>
                 <div class="service-card" style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.05); border-radius:24px; padding:36px 28px; transition:border-color 0.3s, transform 0.3s; backdrop-filter:blur(4px);">
                     <span class="icon" style="font-size:40px; display:block; margin-bottom:16px;">🧠</span>
                     <h3 style="font-size:24px; font-weight:700; margin-bottom:10px;">AI assistants</h3>
                     <p style="color:rgba(255,255,255,0.55); font-size:16px; line-height:1.6;">Advanced NLP-driven bots that understand context, learn from conversations, and handle complex tasks.</p>
-                    <span class="price">from 200$</span>
+                    <span class="price"><span id="price-chatbot-enterprise">from 200$</span></span>
                 </div>
             </div>
         </div>
@@ -223,7 +223,7 @@
                 <div class="pricing-card">
                     <span class="icon">⚡</span>
                     <h3>Starter</h3>
-                    <div class="price">$20+</div>
+                    <div class="price"><span id="price-chatbot-basic-plan">$20+</span></div>
                     <p style="color:rgba(255,255,255,0.4); font-size:14px; margin:4px 0 12px;">No-code · Ready in 1 day</p>
                     <ul>
                         <li>✅ FAQ &amp; support bot</li>
@@ -241,7 +241,7 @@
                 <div class="pricing-card" style="border-color: rgba(124,106,255,0.2);">
                     <span class="icon">🚀</span>
                     <h3>Pro</h3>
-                    <div class="price">$100+</div>
+                    <div class="price"><span id="price-chatbot-pro-plan">$100+</span></div>
                     <p style="color:rgba(255,255,255,0.4); font-size:14px; margin:4px 0 12px;">Custom code · 5–7 days</p>
                     <ul>
                         <li>✅ Lead generation bot</li>
@@ -260,7 +260,7 @@
                 <div class="pricing-card" style="border-color: rgba(224,64,176,0.2);">
                     <span class="icon">🧠</span>
                     <h3>Enterprise</h3>
-                    <div class="price">$200+</div>
+                    <div class="price"><span id="price-chatbot-enterprise-plan">$200+</span></div>
                     <p style="color:rgba(255,255,255,0.4); font-size:14px; margin:4px 0 12px;">AI-powered · 2–4 weeks</p>
                     <ul>
                         <li>✅ AI assistant with NLP</li>
@@ -301,5 +301,20 @@
 <script src="js/pricing.js"></script>
 <script src="js/main.js"></script>
 <script src="js/contact.js"></script>
+<script>
+  // Apply centralized pricing
+  document.addEventListener('DOMContentLoaded', function() {
+    const setPrice = (id, price) => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = formatPrice(price, 'en');
+    };
+    setPrice('price-chatbot-basic', PRICING.chatbot.basic);
+    setPrice('price-chatbot-pro', PRICING.chatbot.pro);
+    setPrice('price-chatbot-enterprise', PRICING.chatbot.enterprise);
+    setPrice('price-chatbot-basic-plan', PRICING.chatbot.basic);
+    setPrice('price-chatbot-pro-plan', PRICING.chatbot.pro);
+    setPrice('price-chatbot-enterprise-plan', PRICING.chatbot.enterprise);
+  });
+</script>
 </body>
 </html>

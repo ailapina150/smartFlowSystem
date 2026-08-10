@@ -174,19 +174,19 @@
                     <span class="icon">&#128187;</span>
                     <h3>Лендинги</h3>
                     <p>Одностраничные сайты, созданные для конверсии. Чистые, быстрые и построенные вокруг вашего предложения и аудитории.</p>
-                    <div style="margin-top:18px; padding:6px 18px; background:rgba(124,106,255,0.12); border-radius:40px; font-weight:600; font-size:15px; color:#b8aaff; display:inline-block;">от $450</div>
+                    <div style="margin-top:18px; padding:6px 18px; background:rgba(124,106,255,0.12); border-radius:40px; font-weight:600; font-size:15px; color:#b8aaff; display:inline-block;"><span id="price-website-landing">от $450</span></div>
                 </div>
                 <div class="card-slide" style="aspect-ratio:auto;">
                     <span class="icon">&#127970;</span>
                     <h3>Корпоративные сайты</h3>
                     <p>Профессиональные многостраничные сайты, которые рассказывают историю бренда, демонстрируют экспертизу и укрепляют доверие.</p>
-                    <div style="margin-top:18px; padding:6px 18px; background:rgba(124,106,255,0.12); border-radius:40px; font-weight:600; font-size:15px; color:#b8aaff; display:inline-block;">от $900</div>
+                    <div style="margin-top:18px; padding:6px 18px; background:rgba(124,106,255,0.12); border-radius:40px; font-weight:600; font-size:15px; color:#b8aaff; display:inline-block;"><span id="price-website-corporate">от $900</span></div>
                 </div>
                 <div class="card-slide" style="aspect-ratio:auto;">
                     <span class="icon">&#128722;</span>
                     <h3>Интернет-магазины</h3>
                     <p>Индивидуальные онлайн-магазины с удобной оплатой, управлением товарами и дизайном, ориентированным на конверсию.</p>
-                    <div style="margin-top:18px; padding:6px 18px; background:rgba(124,106,255,0.12); border-radius:40px; font-weight:600; font-size:15px; color:#b8aaff; display:inline-block;">от $1,200</div>
+                    <div style="margin-top:18px; padding:6px 18px; background:rgba(124,106,255,0.12); border-radius:40px; font-weight:600; font-size:15px; color:#b8aaff; display:inline-block;"><span id="price-website-ecommerce">от $1,200</span></div>
                 </div>
             </div>
         </div>
@@ -236,5 +236,17 @@
 <script src="js/pricing.js"></script>
 <script src="js/main.js"></script>
 <script src="js/contact-ru.js"></script>
+<script>
+  // Apply centralized pricing
+  document.addEventListener('DOMContentLoaded', function() {
+    const setPrice = (id, price) => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = formatPrice(price, 'ru');
+    };
+    setPrice('price-website-landing', PRICING.website.landing);
+    setPrice('price-website-corporate', PRICING.website.corporate);
+    setPrice('price-website-ecommerce', PRICING.website.ecommerce);
+  });
+</script>
 </body>
 </html>

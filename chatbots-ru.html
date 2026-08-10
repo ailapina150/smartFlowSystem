@@ -174,19 +174,19 @@
                     <span class="icon" style="font-size:40px; display:block; margin-bottom:16px;">💬</span>
                     <h3 style="font-size:24px; font-weight:700; margin-bottom:10px;">Боты поддержки</h3>
                     <p style="color:rgba(255,255,255,0.55); font-size:16px; line-height:1.6;">Автоматизируйте ответы на частые вопросы, решайте проблемы и обрабатывайте заявки без участия человека. Работают 24/7.</p>
-                    <span class="price">от 20$</span>
+                    <span class="price"><span id="price-chatbot-basic">от 20$</span></span>
                 </div>
                 <div class="service-card" style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.05); border-radius:24px; padding:36px 28px; transition:border-color 0.3s, transform 0.3s; backdrop-filter:blur(4px);">
                     <span class="icon" style="font-size:40px; display:block; margin-bottom:16px;">🎯</span>
                     <h3 style="font-size:24px; font-weight:700; margin-bottom:10px;">Генерация лидов</h3>
                     <p style="color:rgba(255,255,255,0.55); font-size:16px; line-height:1.6;">Квалифицируйте лиды, назначайте встречи и собирайте контакты автоматически. Превращайте посетителей в клиентов.</p>
-                    <span class="price">от 100$</span>
+                    <span class="price"><span id="price-chatbot-pro">от 100$</span></span>
                 </div>
                 <div class="service-card" style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.05); border-radius:24px; padding:36px 28px; transition:border-color 0.3s, transform 0.3s; backdrop-filter:blur(4px);">
                     <span class="icon" style="font-size:40px; display:block; margin-bottom:16px;">🧠</span>
                     <h3 style="font-size:24px; font-weight:700; margin-bottom:10px;">AI-ассистенты</h3>
                     <p style="color:rgba(255,255,255,0.55); font-size:16px; line-height:1.6;">Продвинутые боты с NLP, которые понимают контекст, обучаются на диалогах и решают сложные задачи.</p>
-                    <span class="price">от 200$</span>
+                    <span class="price"><span id="price-chatbot-enterprise">от 200$</span></span>
                 </div>
             </div>
         </div>
@@ -222,7 +222,7 @@
                 <div class="pricing-card">
                     <span class="icon">⚡</span>
                     <h3>Стартовый</h3>
-                    <div class="price">от 20$</div>
+                    <div class="price"><span id="price-chatbot-basic-plan">от 20$</span></div>
                     <p style="color:rgba(255,255,255,0.4); font-size:14px; margin:4px 0 12px;">Без кода · Готов за 1 день</p>
                     <ul>
                         <li>✅ Бот для FAQ и поддержки</li>
@@ -240,7 +240,7 @@
                 <div class="pricing-card" style="border-color: rgba(124,106,255,0.2);">
                     <span class="icon">🚀</span>
                     <h3>Профи</h3>
-                    <div class="price">от 100$</div>
+                    <div class="price"><span id="price-chatbot-pro-plan">от 100$</span></div>
                     <p style="color:rgba(255,255,255,0.4); font-size:14px; margin:4px 0 12px;">Индивидуальный код · 5–7 дней</p>
                     <ul>
                         <li>✅ Бот для генерации лидов</li>
@@ -259,7 +259,7 @@
                 <div class="pricing-card" style="border-color: rgba(224,64,176,0.2);">
                     <span class="icon">🧠</span>
                     <h3>Бизнес</h3>
-                    <div class="price">от 200$</div>
+                    <div class="price"><span id="price-chatbot-enterprise-plan">от 200$</span></div>
                     <p style="color:rgba(255,255,255,0.4); font-size:14px; margin:4px 0 12px;">На базе ИИ · 2–4 недели</p>
                     <ul>
                         <li>✅ AI-ассистент с NLP</li>
@@ -300,5 +300,20 @@
 <script src="js/pricing.js"></script>
 <script src="js/main.js"></script>
 <script src="js/contact.js"></script>
+<script>
+  // Apply centralized pricing
+  document.addEventListener('DOMContentLoaded', function() {
+    const setPrice = (id, price) => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = formatPrice(price, 'ru');
+    };
+    setPrice('price-chatbot-basic', PRICING.chatbot.basic);
+    setPrice('price-chatbot-pro', PRICING.chatbot.pro);
+    setPrice('price-chatbot-enterprise', PRICING.chatbot.enterprise);
+    setPrice('price-chatbot-basic-plan', PRICING.chatbot.basic);
+    setPrice('price-chatbot-pro-plan', PRICING.chatbot.pro);
+    setPrice('price-chatbot-enterprise-plan', PRICING.chatbot.enterprise);
+  });
+</script>
 </body>
 </html>

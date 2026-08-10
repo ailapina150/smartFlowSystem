@@ -8,27 +8,27 @@
 const PRICING = {
   // --- Websites & Landing Pages (landing.html) ---
   website: {
-    landing: 150,        // Landing page from $450
-    corporate: 450,      // Corporate website from $900
-    ecommerce: 900,     // E-commerce from $1,200
+    landing: 150,        // Landing page from $150
+    corporate: 450,      // Corporate website from $450
+    ecommerce: 900,     // E-commerce from $900
   },
 
   // --- AI Chatbots (chatbots.html) ---
   chatbot: {
-    basic: 30,           // Basic chatbot from $20
-    pro: 150,            // Pro chatbot from $100
-    enterprise: 300,     // Enterprise chatbot from $200
+    basic: 30,           // Basic chatbot from $30
+    pro: 150,            // Pro chatbot from $150
+    enterprise: 300,     // Enterprise chatbot from $300
   },
 
   // --- AI Images & Design (ai-images.html) ---
   aiImage: {
-    basic: 5,            // Basic AI image from $3
+    basic: 5,            // Basic AI image from $5
     standard: 5,         // Standard from $5
-    premium: 15,         // Premium from $10
-    businessCard: 5,     // Business card from $3
+    premium: 15,         // Premium from $15
+    businessCard: 5,     // Business card from $5
     productPhoto: 5,     // Product photo from $5
-    flyer: 15,           // Flyer from $10
-    greetingCard: 5,     // Greeting card from $3
+    flyer: 15,           // Flyer from $15
+    greetingCard: 5,     // Greeting card from $5
     photoEdit: 15,       // Photo editing from $15
   },
 
@@ -39,9 +39,9 @@ const PRICING = {
 
   // --- Homepage service cards (index.html) ---
   homepage: {
-    website: 150,        // Websites & Landing Pages from $450
-    chatbot: 30,         // AI Chatbots from $20
-    aiImage: 5,          // AI Images & Design from $3
+    website: 150,        // Websites & Landing Pages from $150
+    chatbot: 30,         // AI Chatbots from $30
+    aiImage: 5,          // AI Images & Design from $5
   }
 };
 

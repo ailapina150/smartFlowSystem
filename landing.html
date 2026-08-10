@@ -175,19 +175,19 @@
                     <span class="icon">🌐</span>
                     <h3>Landing pages</h3>
                     <p>Single?purpose pages designed to convert. Clean, fast, and built around your offer and audience.</p>
-                    <div style="margin-top:18px; padding:6px 18px; background:rgba(124,106,255,0.12); border-radius:40px; font-weight:600; font-size:15px; color:#b8aaff; display:inline-block;">from $450</div>
+                    <div style="margin-top:18px; padding:6px 18px; background:rgba(124,106,255,0.12); border-radius:40px; font-weight:600; font-size:15px; color:#b8aaff; display:inline-block;"><span id="price-website-landing">from $450</span></div>
                 </div>
                 <div class="card-slide" style="aspect-ratio:auto;">
                     <span class="icon">🏢</span>
                     <h3>Corporate websites</h3>
                     <p>Professional multi?page sites that tell your brand story, showcase expertise, and build trust.</p>
-                    <div style="margin-top:18px; padding:6px 18px; background:rgba(124,106,255,0.12); border-radius:40px; font-weight:600; font-size:15px; color:#b8aaff; display:inline-block;">from $900</div>
+                    <div style="margin-top:18px; padding:6px 18px; background:rgba(124,106,255,0.12); border-radius:40px; font-weight:600; font-size:15px; color:#b8aaff; display:inline-block;"><span id="price-website-corporate">from $900</span></div>
                 </div>
                 <div class="card-slide" style="aspect-ratio:auto;">
                     <span class="icon">🛒</span>
                     <h3>E?commerce &amp; shops</h3>
                     <p>Custom online stores with seamless checkout, product management, and conversion?focused design.</p>
-                    <div style="margin-top:18px; padding:6px 18px; background:rgba(124,106,255,0.12); border-radius:40px; font-weight:600; font-size:15px; color:#b8aaff; display:inline-block;">from $1,200</div>
+                    <div style="margin-top:18px; padding:6px 18px; background:rgba(124,106,255,0.12); border-radius:40px; font-weight:600; font-size:15px; color:#b8aaff; display:inline-block;"><span id="price-website-ecommerce">from $1,200</span></div>
                 </div>
             </div>
         </div>
@@ -237,5 +237,17 @@
 <script src="js/pricing.js"></script>
 <script src="js/main.js"></script>
 <script src="js/contact.js"></script>
+<script>
+  // Apply centralized pricing
+  document.addEventListener('DOMContentLoaded', function() {
+    const setPrice = (id, price) => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = formatPrice(price, 'en');
+    };
+    setPrice('price-website-landing', PRICING.website.landing);
+    setPrice('price-website-corporate', PRICING.website.corporate);
+    setPrice('price-website-ecommerce', PRICING.website.ecommerce);
+  });
+</script>
 </body>
 </html>
