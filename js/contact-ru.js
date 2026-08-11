@@ -125,6 +125,9 @@ function initContactForm() {
         submitBtn.disabled = true;
         submitBtn.textContent = 'Отправка...';
 
+        // Отправка в Telegram (параллельно с Formspree)
+        sendToTelegram(formData);
+
         fetch('https://formspree.io/f/mrenebpo', {
             method: 'POST',
             body: formData,
