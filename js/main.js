@@ -151,3 +151,49 @@ document.addEventListener('click', function(e) {
         popup.classList.remove('show');
     }
 });
+
+// ===== HEADER HIDE ON SCROLL (MOBILE) =====
+// На маленьких экранах хедер прячется при прокрутке вниз
+// и снова появляется при прокрутке вверх.
+(function() {
+    const header = document.querySelector('header');
+    if (!header) return;
+
+    const mobileBreakpoint = 640;
+    let lastScrollY = window.scrollY;
+    let ticking = false;
+
+    function updateHeader() {
+        const currentY = window.scrollY;
+        const isMobile = window.innerWidth <= mobileBreakpoint;
+
+        if (isMobile) {
+            // Прокрутка вниз и проехали небольшой порог -> прячем
+            if (currentY > lastScrollY && currentY > 80) {
+                header.classList.add('header-hidden');
+            } else if (currentY < lastScrollY) {
+                // Прокрутка вверх -> показываем
+                header.classList.remove('header-hidden');
+            }
+        } else {
+            header.classList.remove('header-hidden');
+        }
+
+        lastScrollY = currentY;
+        ticking = false;
+    }
+
+    window.addEventListener('scroll', function() {
+        if (!ticking) {
+            window.requestAnimationFrame(updateHeader);
+            ticking = true;
+        }
+    }, { passive: true });
+
+    // Сбрасываем при изменении размера окна
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > mobileBreakpoint) {
+            header.classList.remove('header-hidden');
+        }
+    });
+})();

@@ -65,6 +65,7 @@ header {
     z-index: 50;
     opacity: 0;
     animation: slideDown 0.8s ease 0.3s forwards;
+    transition: top 0.3s ease;
 }
 
 @keyframes slideDown {
@@ -942,6 +943,7 @@ footer {
 @media (max-width: 640px) {
     .hero-text h1 { font-weight: 700; letter-spacing: -0.5px; }
     header { flex-direction: row; gap: 8px; padding: 10px 0; }
+    header.header-hidden { top: -200px; }
     nav { gap: 8px 14px; font-size: 13px; flex-wrap: wrap; justify-content: flex-end; }
     nav a { white-space: nowrap; }
     .slide { padding: 24px; }
